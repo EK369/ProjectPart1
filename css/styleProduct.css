@@ -1,0 +1,260 @@
+*{
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   font-family: 'Roboto Slab', serif;
+}
+
+body{
+   line-height: 1.5;
+   background: #cfcece;
+}
+
+.card-wrapper{
+   max-width: 1100px;
+   margin: 0 auto;
+}
+
+/* Images section */
+img{
+   width: 100%;
+   display: block;
+   border-radius: 25px;
+   padding: 5px;
+}
+
+.img-display{
+   overflow: hidden;
+}
+
+.img-showcase{
+   display: flex;
+   width: 100%;
+   transition: all 0.5 ease;
+}
+
+.img-showcase img{
+   min-width: 100%;
+}
+
+.img-select{
+   display: flex;
+}
+
+.img-item{
+   margin: 0.3rem;
+}
+
+.img-item:nth-child(1),
+.img-item:nth-child(2),
+.img-item:nth-child(3){
+   margin-right: 0;
+}
+
+.img-item:hover{
+   opacity: 0.8;
+}
+
+.product-content{
+   padding: 2rem 1rem;
+}
+
+/* Editing title section */
+.product-title{
+   font-size: 3rem;
+   text-transform: capitalize;
+   font-weight: 700;
+   position: relative;
+   color: black;
+   margin: 1rem 0;
+}
+
+/* Editing title section */
+.product-title::after{
+   content: "";
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   height: 4px;
+   width: 268px;
+   background: black;
+}
+
+/* Editing products links */
+.product-link{
+   text-decoration: none;
+   text-transform: uppercase;
+   font-weight: 400;
+   font-size: 0.9rem;
+   display: inline-block;
+   margin-bottom: 0.5rem;
+   background: transparent;
+   color: black;
+   padding: 0 0.3rem;
+   transition: all 0.5 ease;
+}
+
+.product-link:hover{
+   opacity: 0.9;
+   color: gold;
+}
+
+.product-rating{
+   color: gold;
+}
+
+.product-rating span{
+   font-weight: 600;
+   color: black;
+}
+
+/* Editing price section */
+.product-price{
+   margin: 1rem 0;
+   font-size: 1rem;
+   font-weight: 700;
+   color: black;
+}
+
+.product-price span{
+   font-weight: 400;
+}
+
+.last-price span{
+   color: red;
+   text-decoration: line-through;
+}
+
+.new-price span{
+   color: blue;
+}
+
+/* Editing heading */
+.product-detail h2{
+   text-transform: capitalize;
+   color: black;
+   padding-bottom: 0.6rem;
+}
+
+/* Editing paragraphs */
+.product-detail p{
+   font-size: 0.9rem;
+   padding: 0.3rem;
+   opacity: 0.9;
+   color: black;
+}
+
+/*Editing lists */
+.product-detail ul{
+   margin: 1rem 0;
+   font-size: 0,9rem;
+}
+
+/* Editing the list item of product*/
+.product-detail ul li{
+   margin: 0;
+   list-style: none;
+   background: url(../checked.png) left center no-repeat;
+   background-size: 20px;
+   padding-left: 1.7rem;
+   margin: 0.4rem 0;
+   font-weight: 600;
+   opacity: 0.9;
+   color: black;
+}
+
+.product-detail ul li span{
+   font-weight: 400;
+}
+
+.purchase-info{
+   margin: 1.5rem 0;
+}
+
+/* Editing input and button section at the same time */
+.purchase-info input,
+.purchase-info .btn{
+   border: 1.5px solid black;
+   border-radius: 25px;
+   text-align: center;
+   padding: 0.45rem 0.8rem;
+   outline: 0;
+   margin-right: 0.2rem;
+   margin-bottom: 1rem;
+}
+
+.purchase-info input{
+   width: 60px;
+}
+
+.purchase-info .btn{
+   cursor: pointer;
+   color: white;
+}
+
+.purchase-info .btn:first-of-type{
+   background: black;
+}
+
+.purchase-info .btn:last-of-type{
+   background: red;
+}
+
+.purchase-info .btn:hover{
+   opacity: 0.9;
+}
+
+.social-links{
+   display: flex;
+   align-items: center;
+}
+
+/* Editing links */
+.social-links a{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 32px;
+   height: 32px;
+   color: black;
+   border: 1px solid black;
+   margin: 0 0.2rem;
+   border-radius: 50%;
+   text-decoration: none;
+   font-size: 0.8rem;
+   transition: all 0.5s ease;
+}
+
+/* Editing hover looks of links */
+.social-links a:hover{
+   background: black;
+   border-color: transparent;
+   color: white;
+}
+
+/* Editing how would be displayed in other devices */
+@media screen and (min-width: 990px){
+
+   .card{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1.5rem;
+   } 
+
+   .card-wrapper{
+      height: 320vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .product-img{
+      display: flex;
+      flex-direction: column;
+      justify-content: center; 
+   }
+
+   .product-content{
+      padding-top: 0;
+   }
+}
